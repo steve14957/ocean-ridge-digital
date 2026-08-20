@@ -1,0 +1,847 @@
+/* ========================================
+   Ocean Ridge Digital
+   Main Stylesheet
+   ======================================== */
+
+
+/* ---------- Global Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #082d4a;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ---------- Header ---------- */
+
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* ---------- Logo ---------- */
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-logo {
+    width: 230px;
+    height: auto;
+    display: block;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #082d4a;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #f26a2e;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #062a46 0%,
+            #084b78 58%,
+            #0b6fa4 100%
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 80px 40px;
+
+    color: #ffffff;
+}
+
+.hero-eyebrow {
+    margin-bottom: 18px;
+
+    color: #ffb347;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 1000px;
+    margin-bottom: 24px;
+
+    font-size: clamp(40px, 4.4vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -1px;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin-bottom: 35px;
+
+    font-size: 19px;
+    line-height: 1.7;
+    color: #eef7fc;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+    font-weight: 700;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #f26a2e;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #d9551f;
+}
+
+.btn-secondary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #082d4a;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1000px) {
+
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .site-logo {
+        width: 190px;
+    }
+
+    .main-nav {
+        gap: 12px 18px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding: 60px 25px;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.hero-buttons {
+    justify-content: center;
+}
+
+}   /* <-- closes @media (max-width: 700px) */
+
+
+/* ---------- Services ---------- */
+
+.services-section {
+    padding: 90px 30px;
+    background-color: #f7fafc;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-eyebrow {
+    margin-bottom: 10px;
+
+    color: #f26a2e;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-bottom: 18px;
+
+    color: #082d4a;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+}
+
+.section-heading p {
+    color: #526575;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ---------- Service Cards ---------- */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    padding: 34px 28px;
+
+    background-color: #ffffff;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    border-top-color: #f26a2e;
+
+    box-shadow: 0 14px 30px rgba(8, 45, 74, 0.14);
+}
+
+.service-card h3 {
+    margin-bottom: 14px;
+
+    color: #082d4a;
+    font-size: 23px;
+}
+
+.service-card p {
+    margin-bottom: 24px;
+
+    color: #526575;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.service-link {
+    margin-top: auto;
+
+    color: #0b6fa4;
+    font-weight: 700;
+}
+
+.service-link:hover {
+    color: #f26a2e;
+}
+
+
+/* ---------- Services Responsive ---------- */
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .services-section {
+        padding: 70px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ---------- Why Ocean Ridge ---------- */
+
+.why-section {
+    padding: 90px 30px;
+    background-color: #ffffff;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    padding: 35px 30px;
+
+    border-left: 4px solid #f26a2e;
+    background-color: #ffffff;
+
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.08);
+}
+
+.why-number {
+    margin-bottom: 16px;
+
+    color: #0b6fa4;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.why-card h3 {
+    margin-bottom: 15px;
+
+    color: #082d4a;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.why-card p {
+    color: #526575;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ---------- Why Ocean Ridge Responsive ---------- */
+
+@media (max-width: 900px) {
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .why-section {
+        padding: 70px 20px;
+    }
+
+}
+
+/* ---------- Featured Work ---------- */
+
+.portfolio-section {
+    padding: 90px 30px;
+    background-color: #f7fafc;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 14px 30px rgba(8, 45, 74, 0.14);
+}
+
+
+/* ---------- Portfolio Images ---------- */
+
+.portfolio-image {
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+    background-color: #e9eef2;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.04);
+}
+
+
+/* ---------- Portfolio Content ---------- */
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 30px;
+}
+
+.portfolio-type {
+    margin-bottom: 8px;
+
+    color: #f26a2e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 14px;
+
+    color: #082d4a;
+    font-size: 24px;
+}
+
+.portfolio-content > p:not(.portfolio-type) {
+    margin-bottom: 24px;
+
+    color: #526575;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.portfolio-link {
+    margin-top: auto;
+
+    color: #0b6fa4;
+    font-weight: 700;
+}
+
+.portfolio-link:hover {
+    color: #f26a2e;
+}
+
+/* ---------- Portfolio Button ---------- */
+
+.portfolio-button {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.portfolio-button a {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background-color: #f26a2e;
+    color: #ffffff;
+
+    border: 2px solid #f26a2e;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.portfolio-button a:hover {
+    background-color: #082d4a;
+    border-color: #082d4a;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Portfolio Responsive ---------- */
+
+@media (max-width: 900px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-image {
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .portfolio-section {
+        padding: 70px 20px;
+    }
+
+    .portfolio-image {
+        height: 220px;
+    }
+
+}
+/* ---------- Final CTA ---------- */
+
+.final-cta {
+    padding: 90px 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #051f34 0%,
+            #083f66 100%
+        );
+
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-cta .section-eyebrow {
+    color: #ffb347;
+}
+
+.final-cta h2 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.15;
+}
+
+.final-cta p {
+    margin: 0 auto 32px;
+
+    max-width: 700px;
+
+    color: #e9f4fa;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #f26a2e;
+    color: #ffffff;
+
+    border: 2px solid #f26a2e;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #082d4a;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Final CTA Responsive ---------- */
+
+@media (max-width: 650px) {
+
+    .final-cta {
+        padding: 70px 20px;
+    }
+
+}
+/* ---------- Interior Page Hero ---------- */
+
+.page-hero {
+    padding: 90px 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #062a46 0%,
+            #084b78 58%,
+            #0b6fa4 100%
+        );
+
+    color: #ffffff;
+}
+
+.page-hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-hero h1 {
+    max-width: 900px;
+    margin: 0 auto 22px;
+
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.08;
+}
+
+.page-hero-content > p:last-child {
+    max-width: 760px;
+    margin: 0 auto;
+
+    color: #eef7fc;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* ---------- General Content Section ---------- */
+
+.content-section {
+    padding: 90px 30px;
+    background-color: #ffffff;
+}
+
+
+/* ---------- Feature Cards ---------- */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.feature-card {
+    padding: 32px 28px;
+
+    background-color: #f7fafc;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.06);
+}
+
+.feature-card h3 {
+    margin-bottom: 13px;
+
+    color: #082d4a;
+    font-size: 22px;
+}
+
+.feature-card p {
+    color: #526575;
+    line-height: 1.7;
+}
+
+
+/* ---------- Design Process ---------- */
+
+.design-process {
+    padding: 90px 30px;
+    background-color: #f7fafc;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.process-step {
+    padding: 30px 25px;
+
+    background-color: #ffffff;
+    border-left: 4px solid #f26a2e;
+
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.06);
+}
+
+.process-step span {
+    display: block;
+    margin-bottom: 15px;
+
+    color: #0b6fa4;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.process-step h3 {
+    margin-bottom: 12px;
+
+    color: #082d4a;
+    font-size: 22px;
+}
+
+.process-step p {
+    color: #526575;
+    line-height: 1.7;
+}
+
+
+/* ---------- Interior Page Responsive ---------- */
+
+@media (max-width: 1000px) {
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .page-hero,
+    .content-section,
+    .design-process {
+        padding: 70px 20px;
+    }
+
+    .feature-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ---------- Footer ---------- */
+
+.site-footer {
+    padding: 28px 20px;
+
+    background-color: #051f34;
+    color: #ffffff;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+.veteran-footer {
+    margin-top: 5px;
+
+    color: #ffb347;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+}
