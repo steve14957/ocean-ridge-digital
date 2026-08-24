@@ -279,7 +279,7 @@ a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -327,9 +327,17 @@ a {
     line-height: 1.7;
 }
 
-.service-link {
+.service-card .service-price {
     margin-top: auto;
+    margin-bottom: 14px;
 
+    color: #0b6fa4;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.service-link {
     color: #0b6fa4;
     font-weight: 700;
 }
@@ -824,6 +832,252 @@ a {
     }
 
 }
+
+
+/* ---------- Website Pricing ---------- */
+
+.website-pricing {
+    padding: 90px 30px;
+    background-color: #f7fafc;
+}
+
+.website-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.website-pricing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 32px;
+
+    background-color: #ffffff;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(8, 45, 74, 0.08);
+}
+
+.website-pricing-card h3 {
+    margin-bottom: 16px;
+
+    color: #082d4a;
+    font-size: 24px;
+}
+
+.website-plan-price {
+    margin-bottom: 26px;
+}
+
+.website-plan-price span,
+.website-plan-price strong {
+    display: block;
+}
+
+.website-plan-price span {
+    color: #526575;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.website-plan-price strong {
+    color: #082d4a;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.website-pricing-card ul {
+    flex-grow: 1;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.website-pricing-card li {
+    position: relative;
+    padding: 10px 0 10px 26px;
+
+    color: #344f65;
+    line-height: 1.5;
+    border-bottom: 1px solid #e7edf1;
+}
+
+.website-pricing-card li:last-child {
+    border-bottom: none;
+}
+
+.website-pricing-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+
+    color: #0b6fa4;
+    font-weight: 700;
+}
+
+.website-pricing-card .cta-button {
+    align-self: flex-start;
+}
+
+.featured-website-plan {
+    border-top-color: #f26a2e;
+    transform: translateY(-12px);
+}
+
+.website-popular-badge {
+    align-self: flex-start;
+    margin-bottom: 18px;
+    padding: 7px 14px;
+
+    background-color: #f26a2e;
+    color: #ffffff;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+
+    .website-pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-website-plan {
+        transform: none;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .website-pricing {
+        padding: 70px 20px;
+    }
+
+    .website-pricing-card {
+        padding: 32px 26px;
+    }
+
+}
+
+
+/* ---------- Digital Solutions Pricing ---------- */
+
+.digital-solutions-pricing {
+    padding: 90px 30px;
+    background-color: #f7fafc;
+}
+
+.digital-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.digital-pricing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 30px;
+
+    background-color: #ffffff;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(8, 45, 74, 0.08);
+}
+
+.digital-pricing-card h3 {
+    margin-bottom: 16px;
+
+    color: #082d4a;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.digital-plan-price {
+    margin-bottom: 22px;
+}
+
+.digital-plan-price span,
+.digital-plan-price strong {
+    display: block;
+}
+
+.digital-plan-price span {
+    color: #526575;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.digital-plan-price strong {
+    color: #082d4a;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.digital-pricing-description {
+    flex-grow: 1;
+    margin-bottom: 28px;
+
+    color: #526575;
+    line-height: 1.7;
+}
+
+.digital-pricing-card .cta-button {
+    align-self: flex-start;
+}
+
+.digital-pricing-note {
+    max-width: 1000px;
+    margin: 42px auto 0;
+    padding: 24px 28px;
+
+    background-color: #ffffff;
+    color: #526575;
+    border-left: 4px solid #f26a2e;
+    border-radius: 6px;
+
+    line-height: 1.7;
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.06);
+}
+
+@media (max-width: 1000px) {
+
+    .digital-pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .digital-solutions-pricing {
+        padding: 70px 20px;
+    }
+
+    .digital-pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .digital-pricing-card {
+        padding: 32px 26px;
+    }
+
+    .digital-pricing-note {
+        padding: 22px;
+    }
+
+}
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -843,5 +1097,609 @@ a {
     font-weight: 700;
     letter-spacing: 1px;
 }
+/* Hosting & Maintenance */
+.hosting-maintenance-page .feature-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
 
+/* Maintenance Pricing Plans */
+
+.hosting-maintenance-page .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.hosting-maintenance-page .pricing-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    padding: 38px 32px;
+
+    background-color: #ffffff;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(8, 45, 74, 0.08);
+}
+
+.hosting-maintenance-page .pricing-card h3 {
+    margin: 0 0 18px;
+
+    color: #082d4a;
+    font-size: 24px;
+}
+
+.hosting-maintenance-page .plan-price {
+    margin-bottom: 28px;
+}
+
+.hosting-maintenance-page .price {
+    color: #082d4a;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.hosting-maintenance-page .price-period {
+    color: #526575;
+    font-size: 16px;
+}
+
+.hosting-maintenance-page .pricing-card ul {
+    flex-grow: 1;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.hosting-maintenance-page .pricing-card li {
+    position: relative;
+    padding: 10px 0 10px 26px;
+    color: #344f65;
+    line-height: 1.5;
+    border-bottom: 1px solid #e7edf1;
+}
+
+.hosting-maintenance-page .pricing-card li:last-child {
+    border-bottom: none;
+}
+
+.hosting-maintenance-page .pricing-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0b6fa4;
+    font-weight: 700;
+}
+
+.hosting-maintenance-page .pricing-card .cta-button {
+    align-self: flex-start;
+}
+
+/* Featured Standard Plan */
+
+.hosting-maintenance-page .featured-plan {
+    border-top-color: #f26a2e;
+    transform: translateY(-12px);
+}
+
+.hosting-maintenance-page .popular-badge {
+    align-self: flex-start;
+    display: inline-block;
+    background-color: #f26a2e;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.hosting-maintenance-page .maintenance-pricing-note {
+    max-width: 1000px;
+    margin: 42px auto 0;
+    padding: 24px 28px;
+
+    background-color: #ffffff;
+    color: #526575;
+    border-left: 4px solid #f26a2e;
+    border-radius: 6px;
+
+    line-height: 1.7;
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.06);
+}
+
+/* Responsive Pricing */
+
+@media (max-width: 900px) {
+    .hosting-maintenance-page .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hosting-maintenance-page .featured-plan {
+        transform: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .hosting-maintenance-page .pricing-card {
+        padding: 32px 26px;
+    }
+
+    .hosting-maintenance-page .maintenance-pricing-note {
+        padding: 22px;
+    }
+}
+
+
+/* ---------- About Page ---------- */
+
+.about-intro-section,
+.about-process-section,
+.founder-section {
+    padding: 90px 30px;
+}
+
+.about-intro-section,
+.about-process-section {
+    background-color: #ffffff;
+}
+
+.about-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.about-service-card {
+    padding: 32px 28px;
+
+    background-color: #f7fafc;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(8, 45, 74, 0.06);
+}
+
+.about-service-card h3 {
+    margin-bottom: 13px;
+
+    color: #082d4a;
+    font-size: 22px;
+}
+
+.about-service-card p {
+    color: #526575;
+    line-height: 1.7;
+}
+
+.veteran-owned-section {
+    padding: 90px 30px;
+    background-color: #f7fafc;
+}
+
+.veteran-owned-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.veteran-owned-copy h2,
+.founder-card h2 {
+    margin-bottom: 20px;
+
+    color: #082d4a;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+}
+
+.veteran-owned-copy > p:last-child,
+.founder-card > p:last-child {
+    color: #526575;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.veteran-values {
+    display: grid;
+    gap: 12px;
+}
+
+.veteran-value {
+    padding: 17px 20px;
+
+    background-color: #ffffff;
+    color: #082d4a;
+    border-left: 4px solid #f26a2e;
+
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(8, 45, 74, 0.06);
+}
+
+.founder-section {
+    background-color: #f7fafc;
+}
+
+.founder-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 46px 48px;
+
+    background-color: #ffffff;
+    border-top: 4px solid #0b6fa4;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 28px rgba(8, 45, 74, 0.08);
+}
+
+@media (max-width: 1000px) {
+
+    .about-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .veteran-owned-layout {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .about-intro-section,
+    .veteran-owned-section,
+    .about-process-section,
+    .founder-section {
+        padding: 70px 20px;
+    }
+
+    .about-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-card {
+        padding: 34px 26px;
+    }
+
+}
+
+
+/* ---------- Contact Page ---------- */
+
+.contact-section,
+.contact-next-section {
+    padding: 90px 30px;
+}
+
+.contact-section {
+    background-color: #ffffff;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 0.8fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.contact-form,
+.alternative-contact {
+    background-color: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 10px 28px rgba(8, 45, 74, 0.08);
+}
+
+.contact-form {
+    padding: 40px;
+    border-top: 4px solid #0b6fa4;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    margin-bottom: 8px;
+
+    color: #082d4a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.optional-label {
+    color: #6b7d8b;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 13px 14px;
+
+    background-color: #ffffff;
+    color: #082d4a;
+    border: 1px solid #cbd7df;
+    border-radius: 6px;
+
+    font: inherit;
+    line-height: 1.4;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #0b6fa4;
+    box-shadow: 0 0 0 3px rgba(11, 111, 164, 0.15);
+}
+
+.form-privacy,
+.form-availability {
+    color: #526575;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-privacy {
+    margin-top: 26px;
+}
+
+.form-availability {
+    margin: 12px 0 20px;
+    padding: 14px 16px;
+
+    background-color: #ffffff;
+    border-left: 4px solid #f26a2e;
+}
+
+.contact-submit-button {
+    display: inline-block;
+    padding: 15px 30px;
+
+    background-color: #f26a2e;
+    color: #ffffff;
+    border: 2px solid #f26a2e;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contact-submit-button:disabled {
+    opacity: 0.72;
+    cursor: not-allowed;
+}
+
+.alternative-contact {
+    padding: 34px 30px;
+    border-top: 4px solid #f26a2e;
+}
+
+.alternative-contact h2 {
+    margin-bottom: 15px;
+
+    color: #082d4a;
+    font-size: 27px;
+    line-height: 1.2;
+}
+
+.alternative-contact > p:not(.section-eyebrow) {
+    margin-bottom: 24px;
+
+    color: #526575;
+    line-height: 1.7;
+}
+
+.email-placeholder {
+    padding: 18px;
+
+    background-color: #ffffff;
+    color: #526575;
+    border: 1px dashed #0b6fa4;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.contact-next-section {
+    background-color: #f7fafc;
+}
+
+.contact-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1000px) {
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .contact-section,
+    .contact-next-section {
+        padding: 70px 20px;
+    }
+
+    .contact-form {
+        padding: 32px 24px;
+    }
+
+    .contact-form-grid,
+    .contact-steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field-full {
+        grid-column: auto;
+    }
+
+    .alternative-contact {
+        padding: 30px 24px;
+    }
+
+    .contact-submit-button {
+        width: 100%;
+    }
+
+}
+/* =========================
+   Portfolio Page
+   ========================= */
+
+.portfolio-section {
+    padding: 70px 5%;
+    background: #f4f7f9;
+}
+
+.portfolio-section .section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.portfolio-section .section-heading h2 {
+    font-size: 2.5rem;
+    color: #073b5c;
+    margin-bottom: 15px;
+}
+
+.portfolio-section .section-heading p {
+    font-size: 1.1rem;
+    color: #52616b;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.portfolio-card-content h3 {
+    color: #073b5c;
+    font-size: 1.4rem;
+    margin: 0 0 12px;
+}
+
+.portfolio-card-content p {
+    color: #52616b;
+    line-height: 1.6;
+    margin: 0 0 25px;
+    flex-grow: 1;
+}
+
+.portfolio-card-content .btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: #0a6f9c;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 11px 22px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.portfolio-card-content .btn:hover {
+    background: #073b5c;
+    transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    .portfolio-card {
+        width: calc(50% - 15px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .portfolio-card {
+        width: 100%;
+    }
+
+    .portfolio-section {
+        padding: 50px 20px;
+    }
+
+    .portfolio-card img {
+        height: 220px;
+    }
+}
+.back-home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 50px;
 }
