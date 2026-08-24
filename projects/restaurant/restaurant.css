@@ -1,0 +1,68 @@
+.restaurant-hero {
+    background-image:
+        linear-gradient(
+            rgba(139,47,47,0.65),
+            rgba(139,47,47,0.45),
+            rgba(139,47,47,0.55)
+        ),
+        url("../../assets/images/restaurant/restaurant-banner.jpg");
+
+    background-size: 110%;
+    background-position: center;
+    color: white;
+    padding: 120px 20px;
+    transition: background-size 6s ease;
+}
+
+.restaurant-hero:hover {
+  background-size: 115%;
+}
+
+.restaurant-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.restaurant-hero p {
+  font-size: 18px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f3ed;
+  color: #2b1d16;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #8b2f2f;
+  color: white;
+  padding: 12px 22px;
+  margin: 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.menu-title {
+  padding: 60px 20px 30px;
+}
+
+.menu-section {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.full-menu-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}

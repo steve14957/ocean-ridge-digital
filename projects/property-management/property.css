@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2937;
+}
+
+nav {
+  background-color: #1f3a5f;
+  color: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #8fd3e8;
+}
+
+.hero {
+  min-height 360px;
+  background: linear-gradient(rgba(31, 58, 95, 0.75), rgba(31, 58, 95, 0.75)),
+              url("../../assets/images/property-management/property-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.primary {
+  background-color: #2ca6c9;
+  color: white;
+}
+
+.secondary {
+  background-color: white;
+  color: #1f3a5f;
+}
+
+.services,
+.portal,
+.contact {
+  padding: 55px 8%;
+  text-align: center;
+}
+
+.services h2,
+.portal h2,
+.contact h2,
+.about h2 {
+  font-size: 38px;
+  color: #1f3a5f;
+}
+
+.section-intro {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+.service-grid,
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card,
+.portal-card {
+  background-color: white;
+  padding: 35px 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.portal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+  width: 90px;
+  height: 90px;
+  background-color: #eef6fb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 38px;
+  color: #2ca6c9;
+}
+
+.service-card h3,
+.portal-card h3 {
+  color: #1f3a5f;
+  font-size: 24px;
+}
+
+.service-card p,
+.portal-card p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.about {
+  background-color: white;
+  padding: 55px 8%;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.portal-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.portal-card i {
+  font-size: 42px;
+  color: #2ca6c9;
+  margin-bottom: 15px;
+}
+
+form {
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+button {
+  background-color: #1f3a5f;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2ca6c9;
+}
+
+footer {
+  background-color: #1f3a5f;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-grid,
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+.property-hero {
+  height: 500px;
+background-image: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+),
+url("../../assets/images/property.jpg");
+    
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.property-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.property-hero p {
+  font-size: 18px;
+  margin: 0;
+}
+.back-home {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #f4f4f4;
+}
+
+.back-btn {
+  display: inline-block;
+  background-color: #1e3a6d;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #2c4d87;
+}
