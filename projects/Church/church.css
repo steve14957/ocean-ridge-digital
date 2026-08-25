@@ -993,6 +993,25 @@ nav {
 .back-home a:hover {
   text-decoration: underline;
 }
+
+.church-footer .back-home {
+  background-color: transparent;
+  text-align: center;
+  padding: 0 10% 30px;
+}
+
+.church-footer .back-home a {
+  display: inline-block;
+  background-color: #2f6f9f;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.church-footer .back-home a:hover {
+  background-color: #3f83b5;
+  text-decoration: none;
+}
 /* =========================
    Sermons Newsletter page
 ========================= */
